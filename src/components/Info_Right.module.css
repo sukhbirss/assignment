@@ -1,0 +1,20 @@
+.container{
+	width: 60%;
+	height:86%;
+	margin-top: 3%;
+	border-left: solid 1px grey;
+	padding-left: 4%;
+}
+.container > p{
+	font-size: 1.5rem;
+	color:#9c9b9c;
+}
+.middle > div > p{
+	margin: 0.2rem;
+	font-size: 1.5rem;
+}
+
+.middle{
+	max-width: 70%;
+
+}

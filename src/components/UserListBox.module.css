@@ -1,0 +1,40 @@
+.box{
+	width: 35vw;
+	height: 80vh;
+	border:solid 1px black;
+	border-radius: 5%;
+	overflow: hidden;
+}
+.section1{
+	width: 100%;
+	height: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f0f1f2;
+	font-size: 1.7rem;
+	color:grey;
+}
+.section2{
+	padding: 0 8% 0 8%;
+	overflow-y: scroll; 
+	height: 85%;
+}
+
+.detail{
+	width: 100%;
+	height: 80px;
+	border-bottom: solid 1px grey;
+	display: flex;
+	align-items: center;
+}
+.detail > img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.detail > p{
+	font-size: 1.8rem;
+	color:grey;
+	padding-left: 20px;
+}

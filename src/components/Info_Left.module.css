@@ -1,0 +1,76 @@
+.container{
+	width: 40%;
+	height: 100%;
+	padding-top: 3%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.container > .top{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.container > .top > img{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+}
+.container > .top > p{
+	font-size: 1.5rem;
+	color: #5a5a5a;
+}
+
+
+.middle > div > p{
+	margin: 0.2rem;
+	font-size: 1.5rem;
+}
+.container > p{
+		margin: 0.2rem;
+}
+.middle{
+	max-width: 70%;
+
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1400px) {
+  .container > .top > img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+.container > .top > p{
+	font-size: 1.2rem;
+	color: #5a5a5a;
+}
+.middle > div > p{
+	margin: 0.2rem;
+	font-size: 1.2rem;
+}
+.container > p{
+		margin: 0.2rem;
+}
+/*.container{
+	background-color: blue;
+}*/
+}
+
+@media screen and (max-width: 1350px) {
+  .container > .top > img{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+.container > .top > p{
+	font-size: 1.0rem;
+	color: #5a5a5a;
+}
+.middle > div > p{
+	margin: 0.2rem;
+	font-size: 1.0rem;
+}
+/*.container{
+	background-color: red;
+}*/
+}
