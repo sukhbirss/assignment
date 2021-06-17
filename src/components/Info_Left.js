@@ -19,15 +19,15 @@ const Data = ({data}) =>{
    )
 }
 
-const Info_Left = () => {
+const Info_Left = ({data}) => {
   return (
   		<div className={style.container}>
         <div className={style.top}>
-          <img src="https://rukminim1.flixcart.com/image/416/416/klicfww0/poster/i/p/7/medium-wall-decor-3d-psoter-for-doraemon-nobita-cartoon-funny-original-imagym48nrgmyrhx.jpeg" />
-  		    <p>Leanne Graham</p>
+          <img src={data.profilepicture} />
+  		    <p>{data.name}</p>
         </div>   
 
-        <Data data={{username:'sukhbir',email:'s.sukhbirsohal@gmail.com',phone:'9873078858',website:'sukhbir.com'}}/>
+        <Data data={{username:data.username,email:data.email,phone:data.phone,website:data.website}}/>
 
          <hr
               style={{
@@ -38,7 +38,7 @@ const Info_Left = () => {
               }}
           />
          <p style={{color:'#5a5a5a'}}>Company</p>
-        <Data data={{name:'sukhbir',catchPhrase:'Multi-layered client-server neural-net',bs:'harness real-time e-markets'}}/>
+        <Data data={{name:data.company.name,catchPhrase:data.company.catchPhrase,bs:data.company.bs}}/>
 
       </div>
   	)

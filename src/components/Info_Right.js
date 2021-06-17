@@ -20,12 +20,12 @@ const Data = ({data}) =>{
    )
 }
 
-const Info_Right = () => {
+const Info_Right = ({data}) => {
   return (
   		<div className={style.container}>
   			<p>Address:</p>
   			<div style={{paddingLeft:'3%'}}>
-  				<Data data={{username:'sukhbir',email:'s.sukhbirsohal@gmail.com',phone:'9873078858',website:'sukhbir.com'}}/>
+  				<Data data={{street:data.username,suite:data.address.suite,city:data.address.city,zipcode:data.address.zipcode}}/>
   			</div>
   		</div>
   	)

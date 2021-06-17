@@ -1,12 +1,22 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
+import {useParams} from "react-router-dom";
 import InfoLeft from '../../components/Info_Left';
 import InfoRight from '../../components/Info_Right';
+import panOrbitApi from '../../api/panOrbitApi';
 import logo from '../../svg.svg'
 import style from './profile.module.css';
 const Profile = () => {
       const [state, setState] = useState('Profile');
+      const [data, setData] = useState("")
 
+      const {id} = useParams();
+
+      useEffect(() => {
+        panOrbitApi.get("/users.json").then((res) =>{
+          setData(res.data.users)})
+      }, [data])
   return (
+    data &&
   		<div className={style.container}>
   			<div className={style.navigator}>
           <div><p onClick={() => setState('Profile')}>Profile</p></div>
@@ -21,15 +31,15 @@ const Profile = () => {
   				<div className={style.header}>
   					<p style={{color:'#5a5a5a',fontSize:'1.5rem'}}>{state}</p>
             <div>
-  					  <img src='https://upload.wikimedia.org/wikipedia/commons/3/33/Tourism_in_London795.jpg' style={{paddingRight:'10px'}}/>
-  					  <p style={{color:'#5a5a5a',fontSize:'1.5rem'}}>sukhbir singh</p>
+  					  <img src={data[id-1].profilepicture} style={{paddingRight:'10px'}}/>
+  					  <p style={{color:'#5a5a5a',fontSize:'1.5rem'}}>{data[id-1].username}</p>
             </div>
   				</div>
 
             {state === 'Profile' ?
                 <div className={style.info}>
-        					<InfoLeft />
-                  <InfoRight />
+        					<InfoLeft data={data[id-1]} />
+                  <InfoRight data={data[id-1]} />
                 </div>
 
                 :
@@ -38,6 +48,7 @@ const Profile = () => {
           }
   			</div>
   		</div>
+    
   	)
 }
 
