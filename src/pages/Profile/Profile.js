@@ -6,6 +6,7 @@ import panOrbitApi from '../../api/panOrbitApi';
 import logo from '../../svg.svg'
 import style from './profile.module.css';
 import LogoutCard from '../../components/logoutCard/LogoutCard';
+import Chat from '../../components/Chat/Chat';
 
 const Profile = () => {
       const [state, setState] = useState('Profile');
@@ -50,6 +51,8 @@ const Profile = () => {
                 <p>Comming Soon</p>
           }
   			</div>
+
+        <Chat />
   		</div>
     }
     

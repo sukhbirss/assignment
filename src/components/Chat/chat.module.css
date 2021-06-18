@@ -1,0 +1,75 @@
+.container{
+	position:fixed;
+	width: 300px;
+	height: 400px;
+	border-radius: 10px 10px 0 0;
+	border:solid 1px grey;
+	bottom: 0px;
+	right: 200px;
+	z-index: 3;
+	animation: createBox .25s;
+  	animation-duration: .50s;
+}
+
+.chat{
+	width: 300px;
+	height:60px;
+	background-color: blue;
+	border-radius: 10px 10px 0 0;
+}
+
+.box{
+	width: 300px;
+	height: 360px;
+	overflow-y:scroll; 
+}
+.container > div > img{
+	width: 50px;
+
+}
+.box > div{
+	display: flex;
+	align-items: center;
+	width: 300px;
+	height: 45px;
+}
+.box > div > img{
+	width: 40px;
+	height:40px;
+	border-radius: 50%;
+}
+.box > div > p{
+	margin: 2px;
+	font-size: 20px;
+}
+
+.container2{
+	width: 300px;
+	height: 60px;
+	position:fixed;
+	bottom: 0px;
+	right: 200px;
+	background-color: blue;
+	border-radius:10px;
+	z-index: 3;
+	animation: createBox2 .25s;
+  	animation-duration: .50s;
+}
+
+@keyframes createBox {
+  from {
+    transform: translateY(340px)
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes createBox2 {
+  from {
+    transform: translateY(-340px)
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
