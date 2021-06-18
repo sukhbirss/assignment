@@ -6,6 +6,8 @@ const Chat = ({ data }) => {
     const [show, setShow] = useState(false);
 
 
+        {/* this component will be used to show that chat box*/}
+
   return (
     <>
       {show ?

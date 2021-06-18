@@ -5,6 +5,10 @@ import style from './logoutCard.module.css'
 const LogoutCard = ({ data,id }) => {
   const history = useHistory();
 
+
+  {/*this component is to render logout card popup*/}
+  {/*data is being fetched from props*/}
+
   return (
     		<div className={style.box}>
           <img src={data[id-1].profilepicture}/>

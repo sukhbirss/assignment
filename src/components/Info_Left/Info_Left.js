@@ -20,12 +20,18 @@ const Data = ({data}) =>{
 }
 
 const Info_Left = ({data}) => {
+
+        {/*as the name suggest this is our left portion of profile information page which is right to the navbar*/}
+
   return (
   		<div className={style.container}>
         <div className={style.top}>
           <img src={data.profilepicture} />
   		    <p>{data.name}</p>
         </div>   
+
+
+        {/*this is my resubale function i made this dynamic we just need to pass an object and the html jsx will be calculated automatically through the Data component*/}
 
         <Data data={{username:data.username,email:data.email,phone:data.phone,website:data.website}}/>
 

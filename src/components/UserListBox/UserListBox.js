@@ -1,7 +1,7 @@
 import React,{useState,useEffect}from 'react'
 import { Link } from 'react-router-dom'
 import style from './UserListBox.module.css'
-import panOrbitApi from '../api/panOrbitApi';
+import panOrbitApi from '../../api/panOrbitApi';
 
 const UserListBox = () => {
   const [data, setData] = useState("")
