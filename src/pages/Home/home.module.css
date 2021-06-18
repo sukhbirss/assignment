@@ -4,4 +4,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-image: url("http://scinurse.org/wp-content/themes/scinurse/images/explore_bg.png");
+	background-repeat: no-repeat;
+	background-size: 100% 40%;
+	z-index: -1;
+
 }

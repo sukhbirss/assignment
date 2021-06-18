@@ -9,6 +9,7 @@
 	-moz-box-shadow: -1px 31px 102px -26px rgba(0,0,0,0.64);
 	animation: createBox .25s;
   	animation-duration: .50s;
+  	background-color: white;
 }
 .section1{
 	width: 100%;

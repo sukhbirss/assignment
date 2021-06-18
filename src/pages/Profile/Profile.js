@@ -52,11 +52,11 @@ const Profile = () => {
           }
   			</div>
 
-        <Chat />
+        <Chat data={data}/>
   		</div>
     }
     
-    {show && <LogoutCard setShow={setShow}/>}
+    {show && <LogoutCard setShow={setShow} data={data} id={id}/>}
     </>
   	)
 }

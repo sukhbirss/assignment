@@ -19,6 +19,11 @@
 	margin:15px 0px 15px 0px;
 	padding: 0px;
 }
+.navigator > div > p:hover{
+	transform: scale(1.1);
+	transform: translateX(20px);
+	cursor: pointer;
+}
 .navigator > div{
 	width: 80%;
 	position: relative;
@@ -73,6 +78,9 @@
 	border-radius: 50%;
 }
 
+.header > div > p:hover{
+	cursor: pointer;
+}
 .info{
 	width: 100%;
 	height: 90%;

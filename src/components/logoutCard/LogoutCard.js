@@ -1,15 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useHistory } from 'react-router-dom'
 import style from './logoutCard.module.css'
 
-const LogoutCard = (props) => {
-  
+const LogoutCard = ({ data,id }) => {
+  const history = useHistory();
 
   return (
     		<div className={style.box}>
-          <img src="https://panorbit.in/wp-content/uploads/2019/hotlink-ok/1002.jpeg"/>
-          <p>Leanne Graham</p>
-          <p>Sincere@april.biz</p>
+          <img src={data[id-1].profilepicture}/>
+          <p>{data[id-1].username}</p>
+          <p>{data[id-1].email}</p>
 
            <hr
                 style={{
@@ -36,7 +36,7 @@ const LogoutCard = (props) => {
                 <p style={{color:'#5a5a5a'}}>Leanne Graham</p>
             </div>
 
-            <button className={style.btn}>Sign out</button>
+            <button className={style.btn} onClick={()=>history.push("/")}>Sign out</button>
     		</div>
   	)
 }
