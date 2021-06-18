@@ -1,0 +1,74 @@
+
+.box{
+	width: 380px;
+	height:400px;
+	position: fixed;
+	right:100px;
+	top:130px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 40px;
+	padding:50px 0 50px 0;
+	box-shadow: -1px 31px 102px -26px rgba(0,0,0,0.64);
+	-webkit-box-shadow: -1px 31px 102px -26px rgba(0,0,0,0.64);
+	-moz-box-shadow: -1px 31px 102px -26px rgba(0,0,0,0.64);
+	z-index: 2;
+	background-color: white;
+	animation: createBox .25s;
+  	animation-duration: .50s;
+}
+.box > p{
+	margin: 2px;
+	font-size: 1.3rem;
+}
+div > p:nth-of-type(2){
+	color: grey;
+}
+.box > img{
+	width: 120px;
+	height:120px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+.box > div{
+	display: flex;
+	align-items: center;
+
+}
+.box > div > img{
+	width: 40px;
+	height:40px;
+	border-radius: 50%;
+}
+.box > div > p{
+	margin: 2px;
+	font-size: 20px;
+}
+.btn{
+	width: 140px;
+	height: 50px;
+	background-color: #db3e44;
+	color: white;
+	border-radius: 40px;
+	border:none;
+	font-size: 1.5rem;
+	margin-top: 20px;
+}
+
+
+/*@keyframes createBox {
+  0%   {height: 0px; width: 380px;}
+  25%  {height: 100px; width: 380px;}
+  50%  {height: 200px; width: 380px;}
+  75%  {height: 300px; width: 380px;}
+  100% {height: 400px; width: 380px}
+}*/
+@keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

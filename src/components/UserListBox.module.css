@@ -7,6 +7,8 @@
 	box-shadow: -1px 31px 102px -26px rgba(0,0,0,0.64);
 	-webkit-box-shadow: -1px 31px 102px -26px rgba(0,0,0,0.64);
 	-moz-box-shadow: -1px 31px 102px -26px rgba(0,0,0,0.64);
+	animation: createBox .25s;
+  	animation-duration: .50s;
 }
 .section1{
 	width: 100%;
@@ -43,4 +45,13 @@
 }
 a{
 	text-decoration: none;
+}
+
+@keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }

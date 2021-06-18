@@ -10,7 +10,8 @@
 	align-items: center;
 	justify-content: center;
 	/*margin-left: 3%;*/
-
+	animation: navigation .25s;
+  	animation-duration: .50s;
 }
 .navigator > div > p{
 	color: white;
@@ -43,6 +44,9 @@
 	height: 88vh;
 	/*border:solid 1px black;*/
 	padding-left: 50px;
+	z-index: 1;
+	animation: createBox .25s;
+  	animation-duration: .50s;
 }
 
 .header{
@@ -84,4 +88,23 @@
 	font-size: 6rem;
 	margin:0px;
 	color: #cdcdcd;
+}
+
+@keyframes navigation {
+  from {
+      transform: translateX(-150%);
+  }
+  to {
+      transform: translateX(0%);
+    
+  }
+}
+
+@keyframes createBox {
+  from {
+      transform: translateY(-50%);
+  }
+  to {
+      transform: translateY(0%);
+  }
 }

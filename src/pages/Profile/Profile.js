@@ -5,10 +5,12 @@ import InfoRight from '../../components/Info_Right';
 import panOrbitApi from '../../api/panOrbitApi';
 import logo from '../../svg.svg'
 import style from './profile.module.css';
+import LogoutCard from '../../components/logoutCard/LogoutCard';
+
 const Profile = () => {
       const [state, setState] = useState('Profile');
       const [data, setData] = useState("")
-
+      const [show, setShow] = useState(false)
       const {id} = useParams();
 
       useEffect(() => {
@@ -16,7 +18,8 @@ const Profile = () => {
           setData(res.data.users)})
       }, [data])
   return (
-    data &&
+    <>
+    {data &&
   		<div className={style.container}>
   			<div className={style.navigator}>
           <div><p onClick={() => setState('Profile')}>Profile</p></div>
@@ -27,17 +30,17 @@ const Profile = () => {
           <hr/>
           <div><p onClick={() => setState('Todo')}>Todo</p></div>
   			</div>
-  			<div className={style.wrapper}>
+  			<div className={style.wrapper} >
   				<div className={style.header}>
   					<p style={{color:'#5a5a5a',fontSize:'1.5rem'}}>{state}</p>
-            <div>
+            <div >
   					  <img src={data[id-1].profilepicture} style={{paddingRight:'10px'}}/>
-  					  <p style={{color:'#5a5a5a',fontSize:'1.5rem'}}>{data[id-1].username}</p>
+  					  <p style={{color:'#5a5a5a',fontSize:'1.5rem'}} onClick={()=>setShow(!show)}>{data[id-1].username}</p>
             </div>
   				</div>
 
             {state === 'Profile' ?
-                <div className={style.info}>
+                <div className={style.info} onClick={()=>setShow(false)}>
         					<InfoLeft data={data[id-1]} />
                   <InfoRight data={data[id-1]} />
                 </div>
@@ -48,7 +51,10 @@ const Profile = () => {
           }
   			</div>
   		</div>
+    }
     
+    {show && <LogoutCard setShow={setShow}/>}
+    </>
   	)
 }
 
