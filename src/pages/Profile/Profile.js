@@ -27,13 +27,13 @@ const Profile = () => {
         {/*this will be used to render navigation component...we can make reusable in future if we want to use it more then once*/}
 
   			<div className={style.navigator}>
-          <div><p onClick={() => setState('Profile')}>Profile</p></div>
+          <div><p onClick={() => setState('Profile')}  style={state === "Profile" ? { color: "red" } : null}>Profile</p></div>
           <hr/>
-          <div><p onClick={() => setState('Posts')}>Posts</p></div>
+          <div><p onClick={() => setState('Posts')} style={state === "Posts" ? { color: "red" } : null}>Posts</p></div>
           <hr/>
-          <div><p onClick={() => setState('Gallary')}>Gallary</p></div>
+          <div><p onClick={() => setState('Gallary')} style={state === "Gallary" ? { color: "red" } : null}>Gallary</p></div>
           <hr/>
-          <div><p onClick={() => setState('Todo')}>Todo</p></div>
+          <div><p onClick={() => setState('Todo')} style={state === "Todo" ? { color: "red" } : null}>Todo</p></div>
   			</div>
 
         {/*following code is for rendering the right hand portion from navigation bar*/}

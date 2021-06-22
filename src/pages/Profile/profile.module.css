@@ -21,9 +21,9 @@
 }
 .navigator > div > p:hover{
 	transform: scale(1.1);
-	transform: translateX(20px);
 	cursor: pointer;
 }
+
 .navigator > div{
 	width: 80%;
 	position: relative;

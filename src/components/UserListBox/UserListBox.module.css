@@ -8,7 +8,7 @@
 	-webkit-box-shadow: -1px 31px 102px -26px rgba(0,0,0,0.64);
 	-moz-box-shadow: -1px 31px 102px -26px rgba(0,0,0,0.64);
 	animation: createBox .25s;
-  	animation-duration: .50s;
+  	animation-duration: 1s;
   	background-color: white;
 }
 .section1{
@@ -56,4 +56,40 @@ a{
   to {
     transform: scale(1);
   }
+}
+
+
+@media screen and (max-width: 1500px) {
+
+.section1{
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f0f1f2;
+	font-size: 1.4rem;
+	color:grey;
+}
+.detail{
+	width: 100%;
+	height: 50px;
+	border-bottom: solid 1px #e2e2e2;
+	display: flex;
+	align-items: center;
+}
+.detail > img{
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	margin-left: 20px;
+}
+.detail > p{
+	font-size: 15px;
+	color:grey;
+	padding-left: 20px;
+}
+/*.container{
+	background-color: blue;
+}*/
 }

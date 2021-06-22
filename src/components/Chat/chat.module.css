@@ -31,6 +31,7 @@
 	height: 360px;
 	overflow-y:scroll; 
 	overflow-x: hidden;
+	background-color: white;
 }
 .container > div > img{
 	width: 50px;

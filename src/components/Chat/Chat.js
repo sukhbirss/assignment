@@ -22,7 +22,7 @@ const Chat = ({ data }) => {
                   <div>
                       <img src={el.profilepicture} style={{paddingRight:'10px'}}/>
                       <p style={{color:'#5a5a5a'}}>{el.username}</p>
-                       <span className={style.green}></span>
+                      <span className={style.green}></span>
                   </div>
               )
             })

@@ -74,3 +74,36 @@ div > p:nth-of-type(2){
     transform: scale(1);
   }
 }
+
+
+@media screen and (max-width: 1500px) {
+
+	.box{
+		width: 280px;
+		height:280px;
+
+	}
+	.box > img{
+		width: 80px;
+		height:80px;
+		border-radius: 50%;
+	}
+	.box > p{
+		margin: 2px;
+		font-size: 15px;
+	}
+
+	.box > div > img{
+	width: 25px;
+	height:25px;
+	border-radius: 50%;
+	}
+	.box > div > p{
+		margin: 2px;
+		font-size: 15px;
+	}
+
+	.box > div > a >p{
+		margin:0px;
+	}
+}
