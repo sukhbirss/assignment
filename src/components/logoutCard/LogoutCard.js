@@ -1,11 +1,18 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { Link,useHistory } from 'react-router-dom'
 import style from './logoutCard.module.css'
 
 const LogoutCard = ({ data,id }) => {
   const history = useHistory();
+  const [firstUser,setFirstUser] = useState(generateRandom(0, 9));
+  const [second,setSecondUser] = useState(generateRandom(0, 9));
 
+   function generateRandom(min, max) {
+    var num = Math.floor(Math.random() * (max - min + 1)) + min;
+    return (num === id-1) ? generateRandom(min, max) : num;
+}
 
+ 
   {/*this component is to render logout card popup*/}
   {/*data is being fetched from props*/}
 
@@ -24,8 +31,8 @@ const LogoutCard = ({ data,id }) => {
                 }}
             />
             <div>
-                <img src="https://panorbit.in/wp-content/uploads/2019/hotlink-ok/1002.jpeg" style={{paddingRight:'10px'}}/>
-                <p style={{color:'#5a5a5a'}}>Leanne Graham</p>
+                <img src={data[firstUser].profilepicture} style={{paddingRight:'10px'}}/>
+                <Link to={`/profile/${firstUser+1}`}><p style={{color:'#5a5a5a'}}>{data[firstUser].name}</p></Link>
             </div>
            <hr
                 style={{
@@ -36,8 +43,8 @@ const LogoutCard = ({ data,id }) => {
                 }}
             />
             <div>
-                <img src="https://panorbit.in/wp-content/uploads/2019/hotlink-ok/1002.jpeg" style={{paddingRight:'10px'}}/>
-                <p style={{color:'#5a5a5a'}}>Leanne Graham</p>
+                <img src={data[second].profilepicture} style={{paddingRight:'10px'}}/>
+                <Link to={`/profile/${second+1}`}><p style={{color:'#5a5a5a'}}>{data[second].name}</p></Link>
             </div>
 
             <button className={style.btn} onClick={()=>history.push("/")}>Sign out</button>
